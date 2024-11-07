@@ -32,10 +32,10 @@
    }
 2. Đăng nhập bằng method Post trên "http://localhost:8080/login" với Body:
    ```body
-      {
-       "username": "admin",
-       "password": "admin"
-      }
+   {
+      "username": "admin",
+      "password": "admin"
+   }
 3. Copy token trả về vào Header:
    ```header
    {
@@ -44,37 +44,37 @@
    }
 4. Kết nối tới Websoket trên "ws://localhost:8080/ws" (cái này không cần đăng nhập để vào)
 5. Tạo 1 sản phẩm mới bằng method Post trên "http://localhost:8080/product" với Body:
-   '''body
-      {
-       "name": "Laptop XI tặng",
-       "description": "Laptop chuyên game với cấu hình mạnh mẽ",
-       "category": "Electronics",
-       "price": 1200.99,
-       "stock": 50,
-       "images": [
-           "https://example.com/images/laptop1.jpg",
-           "https://example.com/images/laptop2.jpg"
-       ],
-       "tags": ["gaming", "laptop", "electronics"],
-       "created_at": "2024-11-01T08:30:00Z",
-       "updated_at": "2024-11-01T08:30:00Z"
-      }
+```body
+{
+   "name": "Laptop XI tặng",
+   "description": "Laptop chuyên game với cấu hình mạnh mẽ",
+   "category": "Electronics",
+   "price": 1200.99,
+   "stock": 50,
+   "images": [
+      "https://example.com/images/laptop1.jpg",
+      "https://example.com/images/laptop2.jpg"
+   ],
+   "tags": ["gaming", "laptop", "electronics"],
+   "created_at": "2024-11-01T08:30:00Z",
+   "updated_at": "2024-11-01T08:30:00Z"
+}
 7. Kiểm tra tất cả sản phẩm bằng method Get trên "http://localhost:8080/product"
 8. Kiểm tra 1 sản phẩm theo id bằng method Get trên "http://localhost:8080/product/{_id}" (_id của sản phẩm mới tạo)
 9. Cập nhật 1 sản phẩm theo id bằng method Put trên "http://localhost:8080/product/{_id}" (_id của sản phẩm mới tạo)
-   '''body
-      {
-       "name": "Laptop XI sửa",
-       "description": "Laptop chuyên game với cấu hình mạnh mẽ",
-       "category": "Electronics",
-       "price": 1200.99,
-       "stock": 50,
-       "images": [
-           "https://example.com/images/laptop1.jpg",
-           "https://example.com/images/laptop2.jpg"
-       ],
-       "tags": ["gaming", "laptop", "electronics"],
-       "created_at": "2024-11-01T08:30:00Z",
-       "updated_at": "2024-11-01T08:30:00Z"
-      }
+```body
+{
+   "name": "Laptop XI sửa",
+   "description": "Laptop chuyên game với cấu hình mạnh mẽ",
+   "category": "Electronics",
+   "price": 1200.99,
+   "stock": 50,
+   "images": [
+      "https://example.com/images/laptop1.jpg",
+      "https://example.com/images/laptop2.jpg"
+   ],
+   "tags": ["gaming", "laptop", "electronics"],
+   "created_at": "2024-11-01T08:30:00Z",
+   "updated_at": "2024-11-01T08:30:00Z"
+}
 10. Xoá 1 sản phẩm theo id bằng method Delete trên "http://localhost:8080/product/{_id}" (_id của sản phẩm mới tạo)
