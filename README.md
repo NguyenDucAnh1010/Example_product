@@ -24,28 +24,22 @@
    go run cmd/main.go
 
 ## Test API (bằng Postman)
-1. Tạo tài khoản
-   ```bash
-   http://localhost:8080/register
-   '''bash
+1. Tạo tài khoản bằng method Post trên "http://localhost:8080/register"
+   Body:
    {
     "username": "admin",
     "password": "admin"
    }
-2. Đăng nhập
-   '''bash
-   http://localhost:8080/login
-
-   '''bash
+2. Đăng nhập bằng method Post trên "http://localhost:8080/login"
+   Body:
    {
     "username": "admin",
     "password": "admin"
    }
-
    copy token trả về vào Header
-   '''bash
+   Header:
    {
      "key": "Authorization",
      "value": "Token trả về khi đăng nhập"
    }
-4. 
+3. 
