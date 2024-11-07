@@ -57,6 +57,8 @@
      "value": "Token trả về khi đăng nhập"
    }
 4. Kết nối tới Websoket trên "ws://localhost:8080/ws" (cái này không cần đăng nhập để vào)
+- Khi có sản phẩn được thêm, sửa xoá thì các client đều sẽ nhận được thôn tin sản phẩm thay đổi đó
+
 5. Tạo 1 sản phẩm mới bằng method Post trên "http://localhost:8080/product" với Body:
    ```body
    {
