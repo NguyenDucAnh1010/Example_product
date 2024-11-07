@@ -32,6 +32,8 @@ func (h *Handler) CreateProduct(response http.ResponseWriter, request *http.Requ
 
 	// Phát thông báo cho các client WebSocket
 	productJSON, _ := json.Marshal(product)
+	message, _ := json.Marshal("Thêm mới sản phẩm")
+	h.Hub.Broadcast(message)
 	h.Hub.Broadcast(productJSON)
 }
 
@@ -98,6 +100,8 @@ func (h *Handler) UpdateProduct(response http.ResponseWriter, request *http.Requ
 
 	// Phát thông báo cho các client WebSocket
 	productJSON, _ := json.Marshal(product)
+	message, _ := json.Marshal("Cập nhật sản phẩm")
+	h.Hub.Broadcast(message)
 	h.Hub.Broadcast(productJSON)
 }
 
