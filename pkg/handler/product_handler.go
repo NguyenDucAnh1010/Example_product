@@ -95,6 +95,10 @@ func (h *Handler) UpdateProduct(response http.ResponseWriter, request *http.Requ
 	}
 
 	responseWithJson(response, http.StatusCreated, result)
+
+	// Phát thông báo cho các client WebSocket
+	productJSON, _ := json.Marshal(product)
+	h.Hub.Broadcast(productJSON)
 }
 
 func (h *Handler) DeleteProduct(response http.ResponseWriter, request *http.Request) {
