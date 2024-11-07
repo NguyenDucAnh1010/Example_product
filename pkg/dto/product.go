@@ -2,7 +2,7 @@ package dto
 
 import "go.mongodb.org/mongo-driver/bson/primitive"
 
-// Person represents a person document in MongoDB
+// Product represents a person document in MongoDB
 type Product struct {
 	ID          primitive.ObjectID `json:"_id,omitempty" bson:"_id,omitempty"`
 	Name        string             `json:"name,omitempty" bson:"name,omitempty"`
