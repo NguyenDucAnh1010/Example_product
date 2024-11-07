@@ -61,7 +61,7 @@
    }
 6. Kiểm tra tất cả sản phẩm bằng method Get trên "http://localhost:8080/product"
 7. Kiểm tra 1 sản phẩm theo id bằng method Get trên "http://localhost:8080/product/{_id}" (_id của sản phẩm mới tạo)
-8. Cập nhật 1 sản phẩm theo id bằng method Put trên "http://localhost:8080/product/{_id}" (_id của sản phẩm mới tạo)
+8. Cập nhật 1 sản phẩm theo id bằng method Put trên "http://localhost:8080/product/{_id}" (_id của sản phẩm mới tạo) với Body:
    ```body
    {
       "name": "Laptop XI sửa",
