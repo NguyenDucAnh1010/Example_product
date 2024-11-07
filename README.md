@@ -23,24 +23,25 @@
 
 ## Test API (bằng Postman)
 1. Tạo tài khoản
-   '''http
+   ```bash
    http://localhost:8080/register
-   '''body
+   '''bash
    {
     "username": "admin",
     "password": "admin"
    }
 2. Đăng nhập
-   '''http
+   '''bash
    http://localhost:8080/login
-   '''body
+   '''bash
    {
     "username": "admin",
     "password": "admin"
    }
    copy token trả về vào Header
+   '''bash
    {
      "key": "Authorization",
      "value": "Token trả về khi đăng nhập"
    }
-3. 
+4. 
