@@ -9,7 +9,7 @@
 - Tính năng 3: sử dụng WebSocket để cập nhật danh sách sản phẩm thời gian thực
 
 ## Yêu cầu hệ thống
-- MongoDB >= 4.0 trên cổng 27017:27017 và không có tài khoản mật khẩu
+- MongoDB >= 4.0 trên cổng 27017:27017 và không có tài khoản mật khẩu (em cài trên Docker)
 - Golang
 
 ## Cài đặt
@@ -22,6 +22,20 @@
 4. Khởi chạy ứng dụng:
    ```bash
    go run cmd/main.go
+
+## Database schema của sản phẩm
+	type Product struct {
+		ID          primitive.ObjectID `json:"_id,omitempty" bson:"_id,omitempty"`
+		Name        string             `json:"name,omitempty" bson:"name,omitempty"`
+		Description string             `json:"description,omitempty" bson:"description,omitempty"`
+		Category    string             `json:"category,omitempty" bson:"category,omitempty"`
+		Price       float64            `json:"price,omitempty" bson:"price,omitempty"`
+		Stock       int                `json:"stock,omitempty" bson:"stock,omitempty"`
+		Images      []string           `json:"images,omitempty" bson:"images,omitempty"`
+		Tags        []string           `json:"tags,omitempty" bson:"tags,omitempty"`
+		CreatedAt   primitive.DateTime `json:"created_at,omitempty" bson:"created_at,omitempty"`
+		UpdatedAt   primitive.DateTime `json:"updated_at,omitempty" bson:"updated_at,omitempty"`
+	}
 
 ## Test API (bằng Postman)
 1. Tạo tài khoản bằng method Post trên "http://localhost:8080/register" với Body:
@@ -43,6 +57,8 @@
      "value": "Token trả về khi đăng nhập"
    }
 4. Kết nối tới Websoket trên "ws://localhost:8080/ws" (cái này không cần đăng nhập để vào)
+- Khi có sản phẩn được thêm, sửa xoá thì các client đều sẽ nhận được thôn tin sản phẩm thay đổi đó
+
 5. Tạo 1 sản phẩm mới bằng method Post trên "http://localhost:8080/product" với Body:
    ```body
    {
