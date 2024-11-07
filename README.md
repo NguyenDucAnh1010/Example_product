@@ -24,22 +24,22 @@
    go run cmd/main.go
 
 ## Test API (bằng Postman)
-1. Tạo tài khoản bằng method Post trên "http://localhost:8080/register"
+1. Tạo tài khoản bằng method Post trên "http://localhost:8080/register" với Body:
    ```body
    {
     "username": "admin",
     "password": "admin"
    }
-2. Đăng nhập bằng method Post trên "http://localhost:8080/login"
-   Body:
-   {
-    "username": "admin",
-    "password": "admin"
-   }
-   copy token trả về vào Header
-   Header:
+2. Đăng nhập bằng method Post trên "http://localhost:8080/login" với Body:
+   ```body
+      {
+       "username": "admin",
+       "password": "admin"
+      }
+3. Copy token trả về vào Header:
+   ```header
    {
      "key": "Authorization",
      "value": "Token trả về khi đăng nhập"
    }
-3. 
+4. 
