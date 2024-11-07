@@ -25,7 +25,7 @@
 
 ## Test API (bằng Postman)
 1. Tạo tài khoản bằng method Post trên "http://localhost:8080/register"
-   'Body
+   ```markdown
    {
     "username": "admin",
     "password": "admin"
