@@ -19,13 +19,13 @@
 2. Tải thư viện xuống:
    ```bash
    go mod tidy
-4. Khởi chạy sever:
+4. Khởi chạy ứng dụng:
    ```bash
    go run cmd/main.go
 
 ## Test API (bằng Postman)
 1. Tạo tài khoản bằng method Post trên "http://localhost:8080/register"
-   ```markdown
+   ```body
    {
     "username": "admin",
     "password": "admin"
