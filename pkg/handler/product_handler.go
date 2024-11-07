@@ -118,6 +118,12 @@ func (h *Handler) DeleteProduct(response http.ResponseWriter, request *http.Requ
 	}
 
 	responseWithJson(response, http.StatusCreated, result)
+
+	// Phát thông báo cho các client WebSocket
+	productJSON, _ := json.Marshal(result)
+	message, _ := json.Marshal("Cập nhật sản phẩm")
+	h.Hub.Broadcast(message)
+	h.Hub.Broadcast(productJSON)
 }
 
 func (h *Handler) QueryProduct(response http.ResponseWriter, request *http.Request) {
