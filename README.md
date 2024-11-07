@@ -9,7 +9,7 @@
 - Tính năng 3: sử dụng WebSocket để cập nhật danh sách sản phẩm thời gian thực
 
 ## Yêu cầu hệ thống
-- MongoDB >= 4.0 trên cổng 27017:27017 và không có tài khoản mật khẩu (em cài trên Docker)
+- MongoDB >= 4.0 trên cổng 27017:27017 và không có tài khoản, mật khẩu (em cài trên Docker)
 - Golang
 
 ## Cài đặt
@@ -57,7 +57,7 @@
      "value": "Token trả về khi đăng nhập"
    }
 4. Kết nối tới Websoket trên "ws://localhost:8080/ws" (cái này không cần đăng nhập để vào)
-- Khi có sản phẩn được thêm, sửa xoá thì các client đều sẽ nhận được thôn tin sản phẩm thay đổi đó
+- Khi có sản phẩn được thêm, sửa, xoá thì các client đều sẽ nhận được thôn tin sản phẩm thay đổi đó
 
 5. Tạo 1 sản phẩm mới bằng method Post trên "http://localhost:8080/product" với Body:
    ```body
