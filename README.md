@@ -17,8 +17,10 @@
    ```bash
    git clone https://github.com/NguyenDucAnh1010/Example_product.git
 2. Tải thư viện xuống:
+   ```bash
    go mod tidy
-3. Khởi chạy sever:
+4. Khởi chạy sever:
+   ```bash
    go run cmd/main.go
 
 ## Test API (bằng Postman)
@@ -33,11 +35,13 @@
 2. Đăng nhập
    '''bash
    http://localhost:8080/login
+
    '''bash
    {
     "username": "admin",
     "password": "admin"
    }
+
    copy token trả về vào Header
    '''bash
    {
